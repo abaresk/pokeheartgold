@@ -133,5 +133,6 @@ void ov01_02204ED8(FieldSystem *fsys, u16 *a1);
 WINDOW *ov01_021EEF68(FieldSystem *fsys, u16 a1);
 void ov01_021EEF88(WINDOW *window);
 BOOL ov01_02206268(FieldSystem *fsys);
+void ov01_021FB514(u32 *a0);
 
 #endif //POKEHEARTGOLD_OVERLAY_01_H
