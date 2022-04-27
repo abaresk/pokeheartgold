@@ -1,8 +1,6 @@
-#include "script.h"
 #include "map_object_manager.h"
 #include "save_follow_poke.h"
 #include "script_pokemon_util.h"
-#include "field_map_object.h"
 #include "map_header.h"
 #include "field_follow_poke.h"
 #include "constants/scrcmd.h"

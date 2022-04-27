@@ -1,6 +1,11 @@
 #ifndef POKEHEARTGOLD_FIELD_FOLLOW_POKE_H
 #define POKEHEARTGOLD_FIELD_FOLLOW_POKE_H
 
+#include "field_map_object.h"
+#include "heap.h"
+#include "pokemon.h"
+#include "script.h"
+
 LocalMapObject *sub_020699F8(MapObjectMan *mapObjectMan, int x, int y, int direction, u32 mapno);
 void sub_02069B74(MapObjectMan *mapObjectMan, u32 mapno);
 LocalMapObject *FollowingPokemon_GetMapObject(FieldSystem *fsys);

@@ -272,7 +272,8 @@ struct FieldSystem {
     u8 filler_98[0x4];
     void *unk9C;
     void *unkA0;
-    u8 filler_A4[0x8];
+    u32 unkA4;
+    u32 unkA8;
     u32 unkAC;
     void *unkB0;
     s64 unkB4;
@@ -289,7 +290,8 @@ struct FieldSystem {
     u32 unk_10C[2];
     GearPhoneRingManager* unk114;
     BUGCONTEST* bugContest;
-    u8 unk11C[0xC];
+    u8 unk11C[0x8];
+    int unk124;
 }; // size: 0x128
 
 typedef BOOL (*ScrCmdFunc)(SCRIPTCONTEXT* ctx);

@@ -1,6 +1,10 @@
 #ifndef POKEHEARTGOLD_FIELD_MAP_OBJECT_H
 #define POKEHEARTGOLD_FIELD_MAP_OBJECT_H
 
+#include "map_events_internal.h"
+#include "map_object_manager.h"
+#include "heap.h"
+
 typedef struct LocalMapObject LocalMapObject;
 
 struct SavedMapObject {
