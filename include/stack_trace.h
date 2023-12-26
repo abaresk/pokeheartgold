@@ -1,0 +1,6 @@
+#ifndef POKEHEARTGOLD_STACK_TRACE_H
+#define POKEHEARTGOLD_STACK_TRACE_H
+
+void PrintStacktrace(void);
+
+#endif //POKEHEARTGOLD_STACK_TRACE_H

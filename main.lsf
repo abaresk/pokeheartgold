@@ -410,6 +410,8 @@ Static main
 
 	Object src/logging.o
 	Object asm/logging_asm.o
+	Object src/stack_trace.o
+	Object src/stacktrace_lib.o
 }
 
 Autoload ITCM

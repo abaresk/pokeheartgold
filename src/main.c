@@ -130,6 +130,9 @@ void NitroMain(void) {
     }
 }
 
+// NOTE: This function must come immediately after NitroMain().
+void MainEnd(void) {}
+
 void Main_ResetOverlayManager(void) {
     _02111868.mainOverlayId = FS_OVERLAY_ID_NONE;
     _02111868.overlayManager = NULL;

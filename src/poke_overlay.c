@@ -1,15 +1,6 @@
 #include "global.h"
 #include "poke_overlay.h"
 
-#define OVY_MAX_PER_REGION            (8)
-
-typedef enum PMiOverlayRegion {
-    OVY_REGION_MAIN,
-    OVY_REGION_ITCM,
-    OVY_REGION_DTCM,
-    OVY_REGION_NUM,
-} PMiOverlayRegion;
-
 typedef struct PMiLoadedOverlay {
     FSOverlayID id;
     BOOL active;
@@ -192,4 +183,19 @@ static BOOL LoadOverlayNoInitAsync(MIProcessor proc, FSOverlayID ovyId) {
     FS_CloseFile(&file);
     FS_StartOverlay(&info);
     return TRUE;
+}
+
+ActiveOverlays GetActiveOverlays(PMiOverlayRegion region) {
+    ActiveOverlays overlays;
+
+    int j = 0;
+    PMiLoadedOverlay *loadedOverlays = GetLoadedOverlaysInRegion(region);
+    for (int i = 0; i < OVY_MAX_PER_REGION; i++) {
+        if (loadedOverlays[i].active == TRUE) {
+            overlays.overlays[j++] = loadedOverlays[i].id;
+        }
+    }
+    overlays.length = j;
+
+    return overlays;
 }
