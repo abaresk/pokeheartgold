@@ -7,8 +7,11 @@
 //  - Open Desmume via the terminal. Any log messages will appear in the
 //    terminal.
 
-extern void debugsyscall(void *str);
-
+// Calls the fake interrupt '0xFC', which prints the contents of register `r0`
+// to the terminal.
+static void debugsyscall(char *str) {
+    asm("swi 0xFC\n");
+}
 
 void desmume_printf(const char *format, ...) {
     char buffer[0x800] = {0};
